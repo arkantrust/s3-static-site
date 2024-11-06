@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  background-color: #121212;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+a {
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #61dafb;
+}
+
+/* GitHub button */
+.github-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: #e0e0e0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #61dafb;
+  color: #121212;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #61dafb;
+  animation: fadeIn 1s ease-out;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #b3b3b3;
+}
+
+/* Intro section */
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  color: #b3b3b3;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.benefit {
+  width: 250px;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #1e1e1e;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #61dafb;
+}
+
+.benefit h2 {
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.benefit:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Learn More Section */
+.learn-more-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none;
+  color: #121212;
+  background-color: #61dafb;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  animation: bounce 2s ease infinite;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.cta-button:hover {
+  color: #61dafb;
+  background-color: #1e1e1e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #b3b3b3;
+  margin-top: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
